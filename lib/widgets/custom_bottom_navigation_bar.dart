@@ -26,7 +26,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             __bottomBarNavItem(0, 'Home', style, 'home'),
-            __bottomBarNavItem(1, 'Search', style, 'search'),
+            __bottomBarNavItem(1, 'Translate', style, 'search'),
             __addVideoNavItem(barHeight),
             __bottomBarNavItem(3, 'Note', style, 'message'),
             __bottomBarNavItem(4, 'Donate', style, 'account'),
