@@ -7,7 +7,7 @@ class DonatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ủng hộ'),
+        title: Text('Donate'),
       ),
       body: Center(
         child: Column(
