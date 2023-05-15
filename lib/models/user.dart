@@ -3,4 +3,6 @@ class User {
   final String profileImageUrl;
 
   User({required this.username, required this.profileImageUrl});
+
+  static fromJson(json) {}
 }
