@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:google_fonts/google_fonts.dart';
-import './navigate_container.dart';
+import './login_page.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.varelaRoundTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const NavigateContainer(),
+      home: LoginPage(),
     );
   }
 }

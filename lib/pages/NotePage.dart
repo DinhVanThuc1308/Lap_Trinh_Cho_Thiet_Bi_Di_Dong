@@ -11,18 +11,21 @@ class _NotePageState extends State<NotePage> {
   final TextEditingController _wordController = TextEditingController();
   final TextEditingController _definitionController = TextEditingController();
   final TextEditingController _noteController = TextEditingController();
-  final List<Map<String, String>> _notes = [];
-
+  final List<Map<String, String>> _notes = []; // Tạo 1 mảng rỗng
+// Hàm này sẽ được gọi khi người dùng nhấn vào nút Lưu
   void _saveNote() {
-    final word = _wordController.text.trim();
-    final definition = _definitionController.text.trim();
-    final note = _noteController.text.trim();
+    final word = _wordController.text.trim(); // Lấy giá trị từ ô nhập liệu
+    final definition =
+        _definitionController.text.trim(); // Lấy giá trị từ ô nhập liệu
+    final note = _noteController.text.trim(); // Lấy giá trị từ ô nhập liệu
 
     if (word.isNotEmpty && definition.isNotEmpty && note.isNotEmpty) {
+      // Kiểm tra xem người dùng đã nhập đủ thông tin hay chưa
       final newNote = {'word': word, 'definition': definition, 'note': note};
       setState(() {
-        _notes.add(newNote);
-        _wordController.clear();
+        // Thêm vào mảng _notes
+        _notes.add(newNote); // Thêm vào mảng _notes
+        _wordController.clear(); // Xóa giá trị ô nhập liệu
         _definitionController.clear();
         _noteController.clear();
       });
@@ -83,6 +86,7 @@ class _NotePageState extends State<NotePage> {
                   ],
                   rows: _notes
                       .map((note) => DataRow(cells: [
+                            // Tạo 1 DataRow từ Map
                             DataCell(Text(note['word']!)),
                             DataCell(Text(note['definition']!)),
                             DataCell(Text(note['note']!)),

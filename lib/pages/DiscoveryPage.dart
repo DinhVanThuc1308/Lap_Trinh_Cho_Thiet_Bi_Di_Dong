@@ -14,6 +14,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
   final GoogleTranslator _translator = GoogleTranslator();
 
   void _translateText() {
+    // Dịch văn bản từ tiếng Hàn sang tiếng Việt
     _translator.translate(_textController.text, to: 'vi').then((translation) {
       setState(() {
         _translatedText = translation.toString();
