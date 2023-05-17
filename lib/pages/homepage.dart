@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
     int _snappedPageIndex = 0;
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: true, // đặt màu nền cho appbar là trong suốt
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -129,9 +129,9 @@ class _HomePageState extends State<HomePage> {
           setState(() {
             _snappedPageIndex = page;
           }),
-        },
-        scrollDirection: Axis.vertical,
-        itemCount: videos.length,
+        }, // xử lý sự kiện cuộn chuột đổi page
+        scrollDirection: Axis.vertical, // cuộn dọc
+        itemCount: videos.length, // số lượng page
         itemBuilder: (context, index) {
           return Stack(
             alignment: Alignment.bottomCenter,

@@ -47,27 +47,6 @@ class _VideoTitleState extends State<VideoTitle> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               return VideoPlayer(_videoController);
-              // return GestureDetector(
-              //   onTap: () => {
-              //     _isPlaying
-              //         ? _videoController.pause()
-              //         : _videoController.play(),
-              //     setState(() {
-              //       _isPlaying = !_isPlaying;
-              //     })
-              //   },
-              //   child: Stack(alignment: Alignment.center, children: [
-              //     VideoPlayer(_videoController),
-              //     IconButton(
-              //         onPressed: () => {
-              //               _videoController.play(),
-              //             },
-              //         icon: Icon(Icons.play_arrow,
-              //             color: Colors.white.withOpacity(0.5),
-              //             size: 50,
-              //             opticalSize: 50))
-              //   ]),
-              // );
             } else {
               return Container(
                   alignment: Alignment.center,
